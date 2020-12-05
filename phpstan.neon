@@ -1,0 +1,11 @@
+parameters:
+  checkMissingIterableValueType: false
+  level: 6
+  paths:
+    - app
+    - tests
+  excludes_analyse:
+    - database/migrations
+    - tests/bootstrap.php
+  ignoreErrors:
+    - '#Unsafe usage of new static#'
