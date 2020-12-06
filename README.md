@@ -28,7 +28,7 @@ npm run build
 composer migr
 ```
 
-Copy .env to .env.local and adapt to your configuration
+Copy .env.example to .env and adapt to your configuration
 
 
 License

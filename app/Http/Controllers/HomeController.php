@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Profile;
+use Illuminate\Contracts\Support\Renderable;
 
 class HomeController extends Controller
 {
@@ -19,29 +19,10 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return Renderable
      */
-    public function index()
+    public function index(): Renderable
     {
-
-        $profiles = Profile::all();
-        foreach ($profiles as $profile){
-            $roles = $profile->roles;
-            dump($roles);
-
-            foreach ($roles as $role){
-                $parent = $role->parent;
-                $children = $role->children;
-                dump($parent);
-                dump($children);
-            }
-
-        }
-
-        $user = auth()->user();
-        $profile = $user->profile;
-        dump($profile);
-
         return view('home');
     }
 }
