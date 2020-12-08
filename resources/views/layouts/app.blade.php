@@ -17,14 +17,18 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <header>
-        @include('menu.main')
-    </header>
+<header>
+    @include('menu.main')
+</header>
 
-    <div id="app">
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
+<div id="app">
+    <main class="py-4">
+        @yield('content')
+    </main>
+</div>
+
+<footer>
+
+</footer>
 </body>
 </html>
