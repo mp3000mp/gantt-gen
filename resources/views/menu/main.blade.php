@@ -65,7 +65,10 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" title="{{ __('logout') }}" href="{{ route('logout') }}"><i class="fa fa-sign-out-alt"></i></a>
+                        <form method="post" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="nav-link" id="logout-but"><i class="fa fa-sign-out-alt"></i></button>
+                        </form>
                     </li>
                 @endguest
             </ul>
