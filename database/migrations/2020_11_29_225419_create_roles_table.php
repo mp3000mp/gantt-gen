@@ -15,7 +15,7 @@ class CreateRolesTable extends Migration
     {
         Schema::create('roles', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('code')->unique();
+            $table->string('code', 30)->unique();
             $table->smallInteger('position')->unsigned();
             $table->tinyInteger('parent_id')->unsigned()->nullable();
             $table->foreign('parent_id')->references('id')->on('roles');

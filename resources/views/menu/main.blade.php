@@ -23,12 +23,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link{{ $activeMenu === 'admin' ? ' active' : '' }}" href="{{ url('/') }}">
-                            Admin
+                            {{ __('Admin') }}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link{{ $activeMenu === 'user' ? ' active' : '' }}" href="{{ url('/') }}">
-                            Test
+                        <a class="nav-link{{ $activeMenu === 'project' ? ' active' : '' }}" href="{{ url('/') }}">
+                            {{ __('Project') }}
                         </a>
                     </li>
                 </ul>
@@ -60,7 +60,7 @@
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" title="{{ 'menu.my_account' }}" href="{{ url('/') }}">{{ __('my_account') }}</a>
+                            <a class="dropdown-item" title="{{ __('menu.my_account') }}" href="{{ url('/account') }}">{{ __('my_account') }}</a>
                             {{-- <a class="dropdown-item" title="{{ 'menu.logout' }}" href="{{ route('logout') }}">{{ __('logout') }} <i class="fa fa-sign-out-alt"></i></a>--}}
                         </div>
                     </li>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('content')
 <div class="container">
@@ -69,6 +69,17 @@
                             </div>
                         </div>
                     </form>
+
+                    <div class="form-group row mt-5">
+                        <span for="register" class="col-md-4 col-form-label text-md-right">{{ __('Or log in') }}</span>
+
+                        <div class="col-md-6">
+                            <a href="{{ route('login') }}" class="btn btn-primary">
+                                {{ __('Login') }}
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
