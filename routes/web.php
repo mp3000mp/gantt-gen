@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//Route::get('/account', [HomeController::class, 'account'])->name('account');
-//Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/account', [HomeController::class, 'account'])->name('account');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+
+// SPA
 Route::get('/{path}', [HomeController::class, 'index'])->name('home')->where('path', '(.*)');
