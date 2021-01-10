@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-//Route::get('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/account', [App\Http\Controllers\HomeController::class, 'account'])->name('account');
+//Route::get('/account', [HomeController::class, 'account'])->name('account');
+//Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/{path}', [HomeController::class, 'index'])->name('home')->where('path', '(.*)');

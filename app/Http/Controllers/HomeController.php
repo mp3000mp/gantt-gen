@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index(): Renderable
     {
-        return view('home');
+        return view('test');
     }
 
     public function account(): Renderable
